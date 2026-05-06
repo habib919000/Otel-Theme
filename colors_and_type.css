@@ -1,0 +1,234 @@
+/* ============================================================
+   Otel Design System — Colors & Type
+   A hotel & travel booking brand. Editorial, photography-led,
+   confident blue primary with a hospitable warm logo accent.
+   ============================================================ */
+
+/* ---------- Fonts ----------
+   Open Sans is now served from licensed local files (uploaded by user).
+   Lato, Poppins, JetBrains Mono are still loaded from Google Fonts —
+   ask the user to upload those if production builds need them. */
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-Italic.ttf") format("truetype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ---------- Brand / Logo Accents ---------- */
+  --otel-logo-blue:   #1A6EFF; /* logo dot, primary button */
+  --otel-logo-red:    #FF4D3E; /* logo left swoop */
+  --otel-logo-yellow: #FFC233; /* logo right swoop */
+
+  /* ---------- Primary (Booking Blue) ----------
+     Used across CTAs, search bars, links, hero overlays. */
+  --blue-50:  #E9F4FF;
+  --blue-100: #CEE1FA;
+  --blue-200: #9DC3F5;
+  --blue-300: #66A1F0;
+  --blue-400: #2B79E4;
+  --blue-500: #0875FF; /* primary CTA */
+  --blue-600: #006EE5; /* primary hover / search-bar fill */
+  --blue-700: #0058B8;
+  --blue-800: #00408A;
+
+  --primary:        var(--blue-500);
+  --primary-hover:  var(--blue-600);
+  --primary-press:  var(--blue-700);
+
+  /* ---------- Purple (overview spec accent) ----------
+     Used in design-spec callouts, code-snippet headers,
+     pull-quote glyphs. Optional brand secondary. */
+  --purple-500: #7047EB;
+  --purple-300: #9747FF;
+  --purple-100: #D8D8FE;
+
+  /* ---------- Neutrals ---------- */
+  --white:    #FFFFFF;
+  --neutral-50:  #F8F9F8;
+  --neutral-100: #F1F1F4;
+  --neutral-150: #F4F4F4; /* card surfaces */
+  --neutral-200: #E9E9E9;
+  --neutral-300: #D3D3D3;
+  --neutral-400: #A5A5AA;
+  --neutral-500: #828282; /* icon, secondary text */
+  --neutral-600: #5B5B60;
+  --neutral-700: #575757; /* body large */
+  --neutral-800: #393939;
+  --neutral-900: #25252D; /* headings on light */
+  --ink:         #16191C; /* footer / deep bg */
+  --black:    #000000;
+
+  /* ---------- Semantic ---------- */
+  --success-50:  #E9FBE5;
+  --success-500: #64B450;
+  --success-600: #4A9038;
+
+  --warning-500: #F5A623; /* star ratings, "people" icon */
+  --warning-600: #D78A12;
+
+  --danger-500:  #E5484D;
+  --danger-50:   #FEEBEC;
+
+  --info-500:    var(--blue-500);
+
+  /* ---------- Surfaces ---------- */
+  --bg:           var(--white);
+  --bg-soft:      #F6F6F6; /* section background, cards */
+  --bg-tinted:    #E9F4FF; /* pull-quote, info callout */
+  --bg-dark:      var(--ink);
+  --surface:      var(--white);
+  --surface-alt:  var(--neutral-50);
+
+  /* ---------- Foreground ---------- */
+  --fg-1: var(--neutral-900); /* headings */
+  --fg-2: var(--neutral-700); /* body */
+  --fg-3: var(--neutral-500); /* meta, placeholders */
+  --fg-4: var(--neutral-400); /* disabled */
+  --fg-on-primary: var(--white);
+  --fg-on-dark:    var(--white);
+
+  /* ---------- Borders ---------- */
+  --border-faint:  rgba(214, 218, 255, 0.7);  /* card edge */
+  --border-soft:   var(--neutral-200);
+  --border:        var(--neutral-300);
+  --divider:       var(--neutral-300);
+
+  /* ---------- Shadows ---------- */
+  --shadow-sm:  0 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-md:  0 4px 16px rgba(16, 24, 40, 0.08);
+  --shadow-lg:  0 12px 32px rgba(16, 24, 40, 0.12);
+  --shadow-xl:  0 24px 48px rgba(16, 24, 40, 0.18);
+  --shadow-hero: 0 30px 80px rgba(0, 64, 138, 0.25);
+
+  /* ---------- Radius ---------- */
+  --radius-xs: 3px;   /* form inputs (Footer email field) */
+  --radius-sm: 5px;   /* buttons */
+  --radius-md: 10px;  /* cards, search bar */
+  --radius-lg: 15px;  /* feature panels */
+  --radius-xl: 30px;  /* showcase frames */
+  --radius-full: 999px;
+
+  /* ---------- Spacing scale (8pt base) ---------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+
+  /* ---------- Type families ---------- */
+  --font-display: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Lato", "Helvetica Neue", Arial, sans-serif;
+  --font-accent:  "Poppins", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:    "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* ---------- Type weights ---------- */
+  --w-regular:  400;
+  --w-medium:   500;
+  --w-semibold: 600;
+  --w-bold:     700;
+  --w-black:    800;
+
+  /* ---------- Type scale (mapped from Figma /Overview/Typography) ---------- */
+  --display-1-size: 78px; --display-1-lh: 1.1;
+  --h1-size: 48px; --h1-lh: 1.1;
+  --h2-size: 36px; --h2-lh: 1.1;
+  --h3-size: 30px; --h3-lh: 1.2;
+  --h4-size: 24px; --h4-lh: 1.3;
+  --h5-size: 20px; --h5-lh: 1.3;
+  --h6-size: 18px; --h6-lh: 1.3;
+
+  --body-xl-size: 20px; --body-xl-lh: 1.5;
+  --body-lg-size: 18px; --body-lg-lh: 1.5;
+  --body-md-size: 16px; --body-md-lh: 1.5;
+  --body-sm-size: 14px; --body-sm-lh: 1.5;
+  --caption-size: 13px; --caption-lh: 1.5;
+  --micro-size:   11px; --micro-lh:   1.2;
+
+  /* ---------- Motion ---------- */
+  --ease-standard: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast:   140ms;
+  --dur-base:   220ms;
+  --dur-slow:   360ms;
+}
+
+/* ============================================================
+   Semantic resets
+   ============================================================ */
+
+html { color: var(--fg-1); background: var(--bg); }
+body {
+  font-family: var(--font-body);
+  font-size: var(--body-md-size);
+  line-height: var(--body-md-lh);
+  color: var(--fg-2);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  color: var(--fg-1);
+  letter-spacing: -0.005em;
+  margin: 0;
+}
+
+h1 { font-size: var(--h1-size); line-height: var(--h1-lh); }
+h2 { font-size: var(--h2-size); line-height: var(--h2-lh); }
+h3 { font-size: var(--h3-size); line-height: var(--h3-lh); }
+h4 { font-size: var(--h4-size); line-height: var(--h4-lh); }
+h5 { font-size: var(--h5-size); line-height: var(--h5-lh); }
+h6 { font-size: var(--h6-size); line-height: var(--h6-lh); }
+
+p { margin: 0 0 var(--s-4); color: var(--fg-2); }
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+a:hover { color: var(--primary-hover); text-decoration: underline; }
+
+code, pre {
+  font-family: var(--font-mono);
+  font-size: var(--body-md-size);
+  line-height: 1.3;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--body-sm-size);
+  font-weight: var(--w-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+}
+
+.display { font-family: var(--font-display); font-weight: var(--w-bold); font-size: var(--display-1-size); line-height: var(--display-1-lh); color: var(--fg-1); }
+.body-lg { font-family: var(--font-body); font-size: var(--body-lg-size); line-height: var(--body-lg-lh); color: var(--fg-2); }
+.body    { font-family: var(--font-body); font-size: var(--body-md-size); line-height: var(--body-md-lh); color: var(--fg-2); }
+.caption { font-family: var(--font-body); font-size: var(--caption-size); line-height: var(--caption-lh); color: var(--fg-3); }
