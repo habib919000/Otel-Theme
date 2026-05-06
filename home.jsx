@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Home page sections.
 
 const { PROPERTIES, ROOMS, POSTS } = window.OtelData;

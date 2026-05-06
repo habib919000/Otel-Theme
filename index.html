@@ -6,87 +6,11 @@
 <title>Otel — A small collection of houses</title>
 <link rel="stylesheet" href="colors_and_type.css">
 <link rel="stylesheet" href="site.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <div id="root"></div>
 
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel" src="data.jsx"></script>
-<script type="text/babel" src="shared.jsx"></script>
-<script type="text/babel" src="home.jsx"></script>
-
-<script type="text/babel">
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "heroImage": "https:\/\/images.unsplash.com\/photo-1551918120-9739cb430c6d?w=1800&q=85",
-  "accent": "blue",
-  "darkMode": false,
-  "compact": false
-}/*EDITMODE-END*/;
-
-const HERO_IMAGES = {
-  "House (default)": "assets/hero-room.jpg",
-  "Coastal": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1800&q=85",
-  "Alpine":  "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=1800&q=85",
-  "Tropical": "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1800&q=85",
-};
-
-function App() {
-  const [tweaks, setTweak] = window.useTweaks(TWEAK_DEFAULTS);
-  window.otelUseReveal();
-
-  React.useEffect(() => {
-    const root = document.documentElement;
-    if (tweaks.accent === "red") root.style.setProperty("--primary", "#FF4D3E");
-    else if (tweaks.accent === "yellow") root.style.setProperty("--primary", "#D78A12");
-    else if (tweaks.accent === "ink") root.style.setProperty("--primary", "#16191C");
-    else root.style.removeProperty("--primary");
-  }, [tweaks.accent]);
-
-  const { Hero, Properties, FeaturedRooms, About, Amenities, Offers, Testimonials, MapSection } = window.OtelHome;
-
-  return (
-    <div data-screen-label="01 Home">
-      <window.OtelHeader active="home" transparent />
-      <Hero tweaks={tweaks} />
-      <Properties />
-      <FeaturedRooms />
-      <About />
-      <Amenities />
-      <Offers />
-      <Testimonials />
-      <MapSection />
-      <window.OtelFooter />
-      <window.OtelBookingSummary />
-
-      <window.TweaksPanel title="Tweaks">
-        <window.TweakSection title="Hero">
-          <window.TweakSelect
-            label="Hero photograph"
-            value={Object.keys(HERO_IMAGES).find(k => HERO_IMAGES[k] === tweaks.heroImage) || "House (default)"}
-            options={Object.keys(HERO_IMAGES)}
-            onChange={(v) => setTweak("heroImage", HERO_IMAGES[v])}
-          />
-        </window.TweakSection>
-        <window.TweakSection title="Accent color">
-          <window.TweakRadio
-            value={tweaks.accent}
-            options={[
-              {value: "blue", label: "Blue"},
-              {value: "red", label: "Red"},
-              {value: "yellow", label: "Amber"},
-              {value: "ink", label: "Ink"},
-            ]}
-            onChange={(v) => setTweak("accent", v)}
-          />
-        </window.TweakSection>
-      </window.TweaksPanel>
-    </div>
-  );
-}
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-</script>
+<script type="module" src="main.jsx"></script>
 </body>
 </html>

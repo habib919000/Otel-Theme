@@ -1,3 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './data.jsx';
+import './shared.jsx';
+import './home.jsx';
+
 // Rooms list page
 
 const { ROOMS, PROPERTIES } = window.OtelData;

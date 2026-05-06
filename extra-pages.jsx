@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Contact, Blog Single, Property pages
 
 const ICONS = window.OtelIcons;

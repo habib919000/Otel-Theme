@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Shared data — properties, rooms, blog posts.
 
 const PROPERTIES = [

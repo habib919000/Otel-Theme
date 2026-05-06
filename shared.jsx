@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Shared components used across pages: header, footer, cart, scroll reveal, icons.
 
 const ICONS = {
@@ -94,8 +96,7 @@ function Header({ active = "home", transparent = false }) {
     <header className={`site-header ${transparent ? "transparent" : ""} ${scrolled ? "scrolled" : ""}`}>
       <div className="container-wide header-inner">
         <a href="index.html" className="brand-mark">
-          <img src="assets/otel-logo.png" alt="" />
-          <span>Otel</span>
+          <img src="assets/otel-logo.png" alt="Otel" />
         </a>
         <nav className="nav">
           <a href="index.html" className={active === "home" ? "active" : ""}>Home</a>
@@ -133,8 +134,7 @@ function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <a href="index.html" className="brand-mark">
-              <img src="assets/otel-logo.png" alt="" />
-              <span>Otel</span>
+              <img src="assets/otel-logo.png" alt="Otel" />
             </a>
             <p>A small collection of editorially-led hotels in coastal, mountain, and metropolitan destinations. Booked direct, run with care.</p>
           </div>

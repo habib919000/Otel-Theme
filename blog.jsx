@@ -1,3 +1,8 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './data.jsx';
+import './shared.jsx';
+
 // Blog page
 
 const { POSTS } = window.OtelData;
